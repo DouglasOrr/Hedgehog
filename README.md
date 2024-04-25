@@ -9,6 +9,12 @@ python3 -m venv .venv
 echo 'export PYTHONPATH="${PYTHONPATH}:$(dirname ${VIRTUAL_ENV})"' >> .venv/bin/activate
 source .venv/bin/activate
 pip install --upgrade pip wheel
-pip install torch --index-url https://download.pytorch.org/whl/cpu
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements-dev.txt
+```
+
+Updating requirements
+
+```sh
+cat requirements-dev.txt | python tools/update_dependencies.py | tee requirements-dev.txt
 ```

@@ -1,0 +1,17 @@
+{
+    "build": { "dockerfile": "Dockerfile" },
+    "runArgs": [
+        "--gpus",
+        "all"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-vscode.cpptools",
+                "ms-python.black-formatter",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}
