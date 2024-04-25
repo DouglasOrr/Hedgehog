@@ -1,5 +1,7 @@
 {
-    "build": { "dockerfile": "Dockerfile" },
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "runArgs": [
         "--gpus",
         "all"
@@ -10,8 +12,12 @@
                 "ms-python.python",
                 "ms-vscode.cpptools",
                 "ms-python.black-formatter",
-                "ms-toolsai.jupyter"
+                "ms-toolsai.jupyter",
+                "ms-python.isort"
             ]
         }
-    }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE},target=/home/host,type=bind,consistency=cached"
+    ]
 }
